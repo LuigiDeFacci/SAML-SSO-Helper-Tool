@@ -4,6 +4,8 @@ A simple, client-side web application built with HTML, CSS, and JavaScript desig
 
 All processing happens **directly in your browser**, ensuring that sensitive data like SAML assertions or private keys (potentially embedded in certificates if pasted carelessly) never leave your machine.
 
+https://luigidefacci.github.io/SAML-SSO-Helper-Tool/
+
 ## Key Features
 
 *   **SAML Message Analyzer:**
