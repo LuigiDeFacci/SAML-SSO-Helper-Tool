@@ -4,9 +4,6 @@ A simple, client-side web application built with HTML, CSS, and JavaScript desig
 
 All processing happens **directly in your browser**, ensuring that sensitive data like SAML assertions or private keys (potentially embedded in certificates if pasted carelessly) never leave your machine.
 
-![Screenshot of SAML Helper Tool](placeholder.png)
-*(Replace `placeholder.png` with an actual screenshot of your tool)*
-
 ## Key Features
 
 *   **SAML Message Analyzer:**
