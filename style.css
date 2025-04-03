@@ -1,0 +1,207 @@
+body {
+    font-family: sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+h1, h2, h3 {
+    color: #0056b3; /* Dark blue */
+}
+
+h1 {
+    text-align: center;
+    background-color: #0056b3;
+    color: white;
+    padding: 1rem 0;
+    margin-bottom: 1rem;
+}
+
+.container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.tool-section {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fdfdfd;
+}
+
+.tool-section h2 {
+    margin-top: 0;
+    border-bottom: 2px solid #0056b3;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+textarea {
+    width: 98%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: monospace;
+    font-size: 0.9em;
+    min-height: 60px; /* Ensure textareas aren't too small */
+}
+
+textarea[readonly] {
+    background-color: #e9ecef;
+    cursor: not-allowed;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.2s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:active {
+    background-color: #004085;
+}
+
+.output-area {
+    margin-top: 15px;
+    padding: 15px;
+    background-color: #eef; /* Light blue background */
+    border: 1px dashed #aaa;
+    border-radius: 4px;
+}
+
+.output-area h3 {
+    margin-top: 0;
+    color: #004085; /* Darker blue for output headers */
+}
+
+pre {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    padding: 10px;
+    border-radius: 4px;
+    white-space: pre-wrap;       /* CSS3 */
+    white-space: -moz-pre-wrap;  /* Firefox */
+    white-space: -pre-wrap;      /* Opera <7 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;       /* IE */
+    font-family: monospace;
+    font-size: 0.9em;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+#samlAnalysisOutput div,
+#certAnalysisOutput div {
+    margin-bottom: 8px;
+    word-wrap: break-word;
+}
+
+#samlAnalysisOutput span.label,
+#certAnalysisOutput span.label {
+    font-weight: bold;
+    color: #555;
+    display: inline-block;
+    min-width: 150px; /* Align values */
+}
+
+.status-valid {
+    color: green;
+    font-weight: bold;
+}
+
+.status-invalid,
+.status-expired,
+.status-not-yet-valid {
+    color: red;
+    font-weight: bold;
+}
+.status-warning {
+    color: orange;
+    font-weight: bold;
+}
+
+.error {
+    color: red;
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    margin-top: 2rem;
+    padding: 1rem;
+    font-size: 0.9em;
+    color: #666;
+}
+
+.input-group {
+    margin-bottom: 1rem; /* Space between input groups */
+}
+
+.separator {
+    border: 0;
+    border-top: 1px solid #eee;
+    margin: 1.5rem 0;
+}
+
+/* Optional: Adjust textarea height if needed */
+#samlResponseInput, #samlRawXmlInput {
+   min-height: 120px; /* Slightly larger default height */
+}
+
+.tool-description {
+    font-size: 0.9em;       /* Slightly smaller font */
+    color: #555;           /* Dark gray color */
+    background-color: #f8f9fa; /* Very light gray background */
+    border-left: 3px solid #007bff; /* Blue accent line on the left */
+    padding: 10px 15px;     /* Padding inside the box */
+    margin-top: 0.5rem;     /* Space above the box */
+    margin-bottom: 1.5rem;  /* Space below the box */
+    border-radius: 4px;     /* Slightly rounded corners */
+    line-height: 1.5;       /* Improve readability */
+}
+
+.tool-description code { /* Style inline code elements */
+    background-color: #e9ecef;
+    padding: 0.2em 0.4em;
+    margin: 0;
+    font-size: 85%;
+    border-radius: 3px;
+    font-family: monospace;
+}
+
+.tool-description strong { /* Make note/warning stand out */
+    color: #c82333; /* Bootstrap's danger color */
+}
+
+/* Existing styles below... */
+body {
+    font-family: sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+h2, h3 {
+    color: #0056b3; /* Dark blue */
+}

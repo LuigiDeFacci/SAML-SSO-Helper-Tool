@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAML SSO Helper</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- jsrsasign library for certificate parsing -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsrsasign/10.8.6/jsrsasign-all-min.js"></script>
+</head>
+<body>
+    <h1>SAML SSO Helper Tool</h1>
+
+    <div class="container">
+        <!-- SAML Response Analyzer -->
+        <section class="tool-section">
+            <h2>SAML Response Analyzer</h2>
+            <!-- ADDED Description -->
+            <p class="tool-description">
+                Decodes Base64 SAML responses or analyzes raw SAML XML (Response, AuthnRequest, LogoutRequest).
+                It formats the XML and extracts key details like Issuer, Status, Destination, Assertion details (NameID, Conditions, Audience, Validity).
+                Checks if the assertion's validity period (NotBefore/NotOnOrAfter) is currently active.
+                <strong>Note:</strong> Does NOT perform cryptographic signature verification.
+            </p>
+
+            <!-- Base64 Input -->
+            <div class="input-group">
+                <p><strong>Option 1:</strong> Paste a Base64 encoded SAML Response/Request.</p>
+                <textarea id="samlResponseInput" rows="8" placeholder="Paste Base64 SAML message here..."></textarea>
+                <button id="analyzeSamlBtn">Decode & Analyze Base64</button>
+            </div>
+
+            <hr class="separator"> <!-- Visual separator -->
+
+            <!-- Raw XML Input -->
+            <div class="input-group">
+                 <p><strong>Option 2:</strong> Paste the raw (decoded) SAML XML.</p>
+                 <textarea id="samlRawXmlInput" rows="8" placeholder="Paste raw SAML XML here..."></textarea>
+                 <button id="analyzeRawXmlBtn">Analyze Raw XML</button>
+            </div>
+
+            <div class="output-area">
+                <h3>Processed XML (Formatted):</h3>
+                <pre id="samlXmlOutput"></pre>
+                <h3>Analysis Results:</h3>
+                <div id="samlAnalysisOutput"></div>
+            </div>
+        </section>
+
+        <!-- Certificate Analyzer -->
+        <section class="tool-section">
+            <h2>X.509 Certificate Analyzer</h2>
+            <!-- ADDED Description -->
+            <p class="tool-description">
+                Parses PEM-formatted X.509 certificates to display details like Subject, Issuer, Validity Period (Not Before/Not After), Serial Number, and Signature Algorithm.
+                It checks if the certificate is currently valid, expired, or not yet valid based on the current time. Provides basic public key information (Type/Size).
+                Ensure you paste the *full* PEM content, including the <code>-----BEGIN CERTIFICATE-----</code> and <code>-----END CERTIFICATE-----</code> lines.
+            </p>
+
+            <textarea id="certificateInput" rows="10" placeholder="Paste PEM Certificate here..."></textarea>
+            <button id="analyzeCertBtn">Analyze Certificate</button>
+            <div class="output-area">
+                <h3>Certificate Details:</h3>
+                <div id="certAnalysisOutput"></div>
+            </div>
+        </section>
+
+        <!-- Base64 Encoder/Decoder -->
+        <section class="tool-section">
+            <h2>Base64 Encoder / Decoder</h2>
+            <!-- ADDED Description -->
+            <p class="tool-description">
+                A simple utility to encode plain text into Base64 format or decode a Base64 string back into plain text. Handles UTF-8 characters correctly.
+            </p>
+
+            <textarea id="base64Input" rows="5" placeholder="Input text here..."></textarea>
+            <button id="base64EncodeBtn">Encode</button>
+            <button id="base64DecodeBtn">Decode</button>
+            <textarea id="base64Output" rows="5" placeholder="Output will appear here..." readonly></textarea>
+        </section>
+
+         <!-- URL Encoder/Decoder -->
+        <section class="tool-section">
+            <h2>URL Encoder / Decoder</h2>
+            <!-- ADDED Description -->
+            <p class="tool-description">
+                Encodes text into a URL-safe format (percent-encoding) suitable for including in URL query parameters or paths. Decodes percent-encoded text back to its original form.
+            </p>
+
+            <textarea id="urlInput" rows="3" placeholder="Input text/URL component here..."></textarea>
+            <button id="urlEncodeBtn">Encode</button>
+            <button id="urlDecodeBtn">Decode</button>
+            <textarea id="urlOutput" rows="3" placeholder="Output will appear here..." readonly></textarea>
+        </section>
+    </div>
+
+    <footer>
+        <p>Note: All processing is done client-side in your browser. No data is sent to any server.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
